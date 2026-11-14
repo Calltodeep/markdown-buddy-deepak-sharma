@@ -9,8 +9,11 @@ This repository contains clean, structured R scripts designed to clean, analyze,
 
 ## Installation
 To run this project locally, ensure you have R and RStudio installed along with the following required package:
-R
+
 install.packages("tidyverse")
+
 library(tidyverse)
+
 sales_data <- read.csv("data/synthetic_sales.csv")
+
 summary(sales_data)
