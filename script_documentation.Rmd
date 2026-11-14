@@ -1,0 +1,24 @@
+---
+title: "Script Documentation: Data Cleaning"
+author: "Your Name"
+output: html_document
+---
+
+# AI Assistance Declaration
+I used ChatGPT for layout suggestions and code block formatting. Prompts used: "Here's my R script description. Suggest Markdown formatting and code block examples.", "Add syntax highlighting and improve section organization (e.g., # Purpose, ## Inputs, ## Outputs)."[cite: 3]. I verified outputs using RStudio Knit[cite: 3]. All final work is my own[cite: 2].
+
+# Purpose
+This R Markdown document outlines the automated data cleaning pipeline for synthetic sales records[cite: 3].
+
+## Inputs
+* `raw_sales_data.csv`: Raw synthetic transaction logs containing transaction dates and revenues[cite: 3].
+
+## Code & Execution
+```{r cleaning}
+library(dplyr)
+raw_data <- data.frame(
+  Date = c("2026-01-01", "2026-01-02"),
+  Revenue = c(1200, 1500)
+)
+clean_data <- raw_data %>% mutate(Date = as.Date(Date))
+head(clean_data)
